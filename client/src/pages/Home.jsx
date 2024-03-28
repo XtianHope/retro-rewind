@@ -2,6 +2,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_USERS } from "../utils/queries";
 
 import UserList from "../components/UserList";
+import { MagnifyingGlass } from 'react-loader-spinner'
 
 function Home() {
   const { data, loading, error } = useQuery(QUERY_USERS);
@@ -13,9 +14,26 @@ function Home() {
   }
 
   if (loading) {
-    return <h2>Loading…</h2>;
+    return <div
+      style={{
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center"
+      }}
+    >
+      <h2> <MagnifyingGlass
+        visible={true}
+        height="200"
+        width="200"
+        ariaLabel="magnifying-glass-loading"
+        wrapperStyle={{}}
+        wrapperClass="magnifying-glass-wrapper"
+        glassColor="#C0EFFF"
+        color="brown"
+      /></h2>;
+    </div>
   }
-  
+
 
   return (
     <>
