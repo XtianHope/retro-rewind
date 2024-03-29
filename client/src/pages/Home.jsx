@@ -18,7 +18,8 @@ function Home() {
       style={{
         display: "flex",
         justifyContent: "center",
-        alignItems: "center"
+        alignItems: "center",
+        paddingTop: 300
       }}
     >
       <h2> <MagnifyingGlass
@@ -30,8 +31,8 @@ function Home() {
         wrapperClass="magnifying-glass-wrapper"
         glassColor="#C0EFFF"
         color="brown"
-      /></h2>;
-    </div>
+      /></h2>
+    </div>;
   }
 
 

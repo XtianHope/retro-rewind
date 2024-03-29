@@ -4,6 +4,7 @@ const typeDefs = `#graphql
     username: String
     email: String
     password: String
+    gameTag: String
   }
 
   type Auth {
@@ -18,7 +19,7 @@ const typeDefs = `#graphql
   }
 
   type Mutation {
-    addUser(email:String!, username:String!, password:String!): Auth
+    addUser(email:String!, username:String!, password:String!, gameTag:String!): Auth
     login(email:String!, password:String!): Auth
   }
 `;

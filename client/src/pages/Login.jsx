@@ -36,6 +36,7 @@ const Login = () => {
     setFormState({
       email: '',
       password: '',
+      gameTag: '',
     });
   };
 
