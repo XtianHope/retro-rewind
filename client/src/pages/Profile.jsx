@@ -54,6 +54,7 @@ const Profile = () => {
       <ul>
         <li>username: {user.username}</li>
         <li>email: {user.email}</li>
+        <li>gametag: {user.gameTag}</li>
       </ul>
     );
   }

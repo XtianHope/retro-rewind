@@ -11,6 +11,7 @@ const Signup = () => {
     username: '',
     email: '',
     password: '',
+    gameTag: '',
   });
   const [addUser, { error, data }] = useMutation(ADD_USER);
 
@@ -67,6 +68,13 @@ const Signup = () => {
           name="password"
           type="password"
           value={formState.password}
+          onChange={handleChange}
+        />
+        <input
+          placeholder="Your gamertag"
+          name="gameTag"
+          type="text"
+          value={formState.gameTag}
           onChange={handleChange}
         />
         <button type="submit">

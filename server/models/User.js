@@ -18,8 +18,21 @@ const userSchema = new Schema({
     type: String,
     required: true,
     minlength: 5,
+  },
+  gameTag: {
+    type: String,
+    // required: true,
+    minlength:3,
+    maxLength:4
+  },
+  score: {
+      type: Number,
+      required: null,
+      minlength: 3,
+      maxLength: 3
+    }
   }
-});
+);
 
 userSchema.pre('save', async function (next) {
   if (this.isNew || this.isModified('password')) {
