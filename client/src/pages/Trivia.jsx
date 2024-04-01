@@ -57,9 +57,8 @@ const Trivia = () => {
         const userScore = score;
         const userName = "User";
         setHighScores([...highScores, {userName, userScore}]);
-    }
+    };
 
-    addHighScore();
 
     // Restart - Reset to 5 min/300 sec - Reset to  first question - Reset score to 0
     const handleRestart = () => {
@@ -69,6 +68,15 @@ const Trivia = () => {
         setScore(0);
         setShowResult(false);
     };
+
+
+ // useEffect function to prevent re-rendering
+ useEffect(() => {
+    if (showResult) {
+        addHighScore(); 
+    }
+}, [showResult]);
+
 
 // Trivia component
     return (
