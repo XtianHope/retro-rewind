@@ -7,6 +7,9 @@ import Home from './pages/Home';
 import Login from './pages/Login';
 import Profile from './pages/Profile';
 import Signup from './pages/Signup.jsx';
+import Trivia from './pages/Trivia.jsx'; // Imported new Trivia page
+import HighScoresPage from './pages/HighScores.jsx'; // Imported high scores page
+
 
 const router = createBrowserRouter([
   {
@@ -33,6 +36,14 @@ const router = createBrowserRouter([
         path: '/me',
         element: <Profile />
       },
+      {
+        path: '/trivia',
+        element: <Trivia /> // Added new trivia page
+      },
+      {
+        path: '/highscores',
+        element: <HighScoresPage /> // Added new high scores page
+      }
     ]
   }
 ])

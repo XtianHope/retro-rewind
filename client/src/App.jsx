@@ -8,6 +8,7 @@ import {
 import { setContext } from '@apollo/client/link/context';
 
 import Navbar from './components/Navbar';
+import 'semantic-ui-css/semantic.min.css'; // Added Semantic UI CSS
 
 // Construct our main GraphQL API endpoint
 const httpLink = createHttpLink({
