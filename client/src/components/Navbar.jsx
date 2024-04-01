@@ -16,6 +16,10 @@ function Navbar() {
         <Link to="/me">
           {Auth.getProfile().data.username}&lsquo;s profile
         </Link>
+        {/* Link in navbar to trivia page? or no? */}
+        <Link to="/trivia"> 
+          Trivia
+        </Link>
         <button onClick={logout}>
           Logout
         </button>
