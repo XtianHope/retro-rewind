@@ -1,17 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
-<<<<<<< HEAD
-
-
-function Navbar() {
-  const logout = (event) => {
-    event.preventDefault();
-    Auth.logout();
-  };
-  
-  if (Auth.loggedIn()) {
-=======
 import { MenuItem, Menu } from 'semantic-ui-react';
 class Navbar extends React.Component {
   state = { activeItem: 'home' };
@@ -54,7 +43,6 @@ class Navbar extends React.Component {
       );
     }
     // If logged out show login controls
->>>>>>> d79d95fcab1e34a0794c7f4b7000763b94aaae98
     return (
       <Menu tabular>
         <MenuItem
@@ -77,11 +65,6 @@ class Navbar extends React.Component {
   }
 }
 export default Navbar;
-
-
-
-
-
 
 
 
