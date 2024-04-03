@@ -1,5 +1,7 @@
+import React from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
+<<<<<<< HEAD
 
 
 function Navbar() {
@@ -9,38 +11,95 @@ function Navbar() {
   };
   
   if (Auth.loggedIn()) {
+=======
+import { MenuItem, Menu } from 'semantic-ui-react';
+class Navbar extends React.Component {
+  state = { activeItem: 'home' };
+  handleItemClick = (e, { name }) => this.setState({ activeItem: name });
+  render() {
+    const { activeItem } = this.state;
+    const logout = (event) => {
+      event.preventDefault();
+      Auth.logout();
+    };
+    if (Auth.loggedIn()) {
+      return (
+        <h1>
+          <Menu tabular>
+            <MenuItem
+              name='home'
+              active={activeItem === 'home'}
+              onClick={this.handleItemClick}
+            />
+            <Link to="/me">
+              <MenuItem
+                name='profile'
+                active={activeItem === 'profile'}
+                onClick={this.handleItemClick}
+              />
+              {/* {Auth.getProfile().data.username}'s profile */}
+            </Link>
+            <Link to="/trivia">
+              <MenuItem
+                name='trivia'
+                active={activeItem === 'trivia'}
+                onClick={this.handleItemClick}
+              />
+            </Link>
+          </Menu>
+          <button onClick={logout}>
+            Logout
+          </button>
+        </h1>
+      );
+    }
+    // If logged out show login controls
+>>>>>>> d79d95fcab1e34a0794c7f4b7000763b94aaae98
     return (
-      <>
-        <Link to="/">
-          Home
-        </Link>
-        <Link to="/me">
-          {Auth.getProfile().data.username}&lsquo;s profile
-        </Link>
-        {/* Link in navbar to trivia page? or no? */}
-        <Link to="/trivia"> 
-          Trivia
-        </Link>
-        <button onClick={logout}>
-          Logout
-        </button>
-      </>
+      <Menu tabular>
+        <MenuItem
+          name='home'
+          active={activeItem === 'home'}
+          onClick={this.handleItemClick}
+        />
+        <MenuItem
+          name='login'
+          active={activeItem === 'login'}
+          onClick={this.handleItemClick}
+        />
+        <MenuItem
+          name='signup'
+          active={activeItem === 'signup'}
+          onClick={this.handleItemClick}
+        />
+      </Menu>
     );
   }
-  // If logged out show login controls
-  return (
-    <>
-      <Link to="/">
-        Home
-      </Link>
-      <Link to="/login">
-        Login
-      </Link>
-      <Link to="/signup">
-        Signup
-      </Link>
-    </>
-  );
 }
-
 export default Navbar;
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
