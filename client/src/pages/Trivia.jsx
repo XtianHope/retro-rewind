@@ -67,6 +67,19 @@ const Trivia = () => {
         setSelectedOption(null);
         setScore(0);
         setShowResult(false);
+    
+
+        // Restart the timer on "restart" button click
+        const timerInterval = setInterval(() => {
+            setTimeLeft(prevTimeLeft => {
+                if (prevTimeLeft <= 0 || currentQuestionIndex >= questions.length) {
+                    clearInterval(timerInterval);
+                    setShowResult(true);
+                    return 0;
+                }
+                return prevTimeLeft - 1;
+            });
+        }, 1000);
     };
 
 
