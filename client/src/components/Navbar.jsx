@@ -32,6 +32,7 @@ const Navbar = () => {
             as={Link}
             to="/me"
           />
+          
           <Menu.Item
             name='trivia'
             active={activeItem === 'trivia'}
@@ -39,6 +40,18 @@ const Navbar = () => {
             as={Link}
             to="/trivia"
           />
+
+<Menu.Item
+            name='HighScores'
+            active={activeItem === 'HighScore'}
+            onClick={() => handleItemClick('HighScore')}
+            as={Link}
+            to="/HighScore"
+          />
+
+
+
+
           <Menu.Menu position='right'>
             <Menu.Item
               name='logout'
