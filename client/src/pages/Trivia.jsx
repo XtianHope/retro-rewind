@@ -2,7 +2,6 @@ import { useState, useEffect } from "react";
 import '../assets/css/Trivia.css'; // Import css file
 import { Navigate } from "react-router-dom";
 
-// import LisaSimpsonImage from '../../assets/images/lisa-simpson.jpg' // Cant get image to import without error?
 
 const Trivia = () => {
     const [timeLeft, setTimeLeft] = useState(50); //5 minutes is 300 seconds
@@ -16,14 +15,14 @@ const Trivia = () => {
         {
             id: 1,
             question: "Who am I?",
-            image: '/assets/images/Lisa-Simpson.jpg',
+            image: '../../public/images/lisa-simpson.jpg',
             options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
             answer: "Lisa Simpson"
         },
         {
             id: 2,
             question: "Who am I?",
-            image: '/assets/images/Lisa-Simpson.jpg',
+            image: '../../public/images/lisa-simpson.jpg',
             options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
             answer: "Lisa Simpson"
 
