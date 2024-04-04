@@ -1,9 +1,11 @@
 import { useState, useEffect } from "react";
 import '../assets/css/Trivia.css'; // Import css file
+import { Navigate } from "react-router-dom";
+
 //import LisaSimpsonImage from '../assets/images/lisa-simpson.jpg'; // Cant get image to import without error?
 
 const Trivia = () => {
-    const [timeLeft, setTimeLeft] = useState(300); //5 minutes is 300 seconds
+    const [timeLeft, setTimeLeft] = useState(50); //5 minutes is 300 seconds
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Index keeps track of question user is on
     const [selectedOption, setSelectedOption] = useState(null); // Keeps track of user selected answer
     const [score, setScore] = useState(0); // User score
@@ -16,6 +18,14 @@ const Trivia = () => {
             // image: <img src={LisaSimpsonImage} alt="Question" />,
             options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
             answer: "Lisa Simpson"
+        },
+        {
+            id: 2,
+            question: "Who am I?",
+            // image: <img src={LisaSimpsonImage} alt="Question" />,
+            options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
+            answer: "Lisa Simpson"
+
         },
         // Test this one question before adding more
     ];
@@ -53,10 +63,10 @@ const Trivia = () => {
     };
 
     // High Scores
-    const addHighScore =() => {
+    const addHighScore = () => {
         const userScore = score;
         const userName = "User";
-        setHighScores([...highScores, {userName, userScore}]);
+        setHighScores([...highScores, { userName, userScore }]);
     };
 
 
@@ -67,7 +77,7 @@ const Trivia = () => {
         setSelectedOption(null);
         setScore(0);
         setShowResult(false);
-    
+
 
         // Restart the timer on "restart" button click
         const timerInterval = setInterval(() => {
@@ -83,15 +93,19 @@ const Trivia = () => {
     };
 
 
- // useEffect function to prevent re-rendering
- useEffect(() => {
-    if (showResult) {
-        addHighScore(); 
+    // useEffect function to prevent re-rendering
+    useEffect(() => {
+        if (showResult) {
+            addHighScore();
+        }
+    }, [showResult]);
+
+    if (currentQuestionIndex >= questions.length) {
+        // return <Navigate to="/highscores" />;
+        return <Navigate to="/highscores" />;
     }
-}, [showResult]);
 
-
-// Trivia component
+    // Trivia component
     return (
         <div className="trivia-container">
             {showResult ? (

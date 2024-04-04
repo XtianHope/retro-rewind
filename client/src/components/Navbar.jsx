@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Auth from '../utils/auth';
 import { Menu } from 'semantic-ui-react';
@@ -42,11 +42,11 @@ const Navbar = () => {
           />
 
 <Menu.Item
-            name='HighScores'
-            active={activeItem === 'HighScore'}
-            onClick={() => handleItemClick('HighScore')}
+            name='highScores'
+            active={activeItem === 'highScores'}
+            onClick={() => handleItemClick('highScores')}
             as={Link}
-            to="/HighScore"
+            to="/highScores"
           />
 
 

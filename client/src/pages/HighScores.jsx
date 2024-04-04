@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 const HighScoresPage = () => {
-    // State variable to store the high scores fetched from the server
+
     const [highScores, setHighScores] = useState([]);
     const fetchHighScores = async () => {
         try {
