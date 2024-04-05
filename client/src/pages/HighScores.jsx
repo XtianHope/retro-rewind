@@ -25,6 +25,7 @@ const HighScoresPage = () => {
     return (
         <div>
             <h1>High Scores</h1>
+            <h2>{score}</h2>
             <ul>
                 {/* Map over the high scores and render each score as a list item */}
                 {highScores.map((score, index) => (

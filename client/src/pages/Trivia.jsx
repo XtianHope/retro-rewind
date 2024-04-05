@@ -4,31 +4,30 @@ import { Navigate } from "react-router-dom";
 
 
 const Trivia = () => {
-    const [timeLeft, setTimeLeft] = useState(50); //5 minutes is 300 seconds
+    const [timeLeft, setTimeLeft] = useState(300); //5 minutes is 300 seconds
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Index keeps track of question user is on
     const [selectedOption, setSelectedOption] = useState(null); // Keeps track of user selected answer
     const [score, setScore] = useState(0); // User score
     const [showResult, setShowResult] = useState(false); // Show result page
     const [highScores, setHighScores] = useState([]); // High scores - Array to store
 
-    const questions = [
+    const questions =[
         {
             id: 1,
             question: "Who am I?",
             image: '../../public/images/lisa-simpson.jpg',
-            options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
+            options: [
+              "Lisa Simpson",
+              "Bart Simpson",
+              "Marge Simpson",
+              "Homer Simpson"
+            ],
             answer: "Lisa Simpson"
-        },
-        {
-            id: 2,
-            question: "Who am I?",
-            image: '../../public/images/lisa-simpson.jpg',
-            options: ["Lisa Simpson", "Bart Simpson", "Marge Simpson", "Homer Simpson"],
-            answer: "Lisa Simpson"
-
-        },
+          },
+    ]
+        
         // Test this one question before adding more
-    ];
+    
 
     // Timer
     useEffect(() => {
@@ -54,7 +53,7 @@ const Trivia = () => {
     // Next Question
     const handleNextQuestion = () => {
         if (selectedOption === questions[currentQuestionIndex].answer) { // Is answer correct
-            setScore(prevScore => prevScore + 1);
+            setScore(prevScore => prevScore + 10);
         }
 
         // Move to next
@@ -100,7 +99,7 @@ const Trivia = () => {
         }
     }, [showResult]);
 
-    if (currentQuestionIndex >= questions.length) {
+    if (currentQuestionIndex > questions.length) {
         // return <Navigate to="/highscores" />;
         return <Navigate to="/highscores" />;
     }
@@ -117,6 +116,7 @@ const Trivia = () => {
             ) : (
                 <div>
                     <h1>Trivia</h1>
+                    <h4>Score {score}</h4>
                     <h2>Time left: {timeLeft}</h2>
                     <h3>Question {currentQuestionIndex + 1}</h3>
                     <h4>{questions[currentQuestionIndex].question}</h4>
