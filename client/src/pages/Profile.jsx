@@ -6,6 +6,8 @@ import Auth from '../utils/auth';
 import { QUERY_USERS, QUERY_USER, QUERY_ME } from '../utils/queries';
 // Components
 import UserList from '../components/UserList';
+import { Container, Header, List } from 'semantic-ui-react';
+import profilebackground from '../../public/images/profilebackground.jpg';
 
 const Profile = () => {
   const { id } = useParams();
@@ -43,7 +45,6 @@ const Profile = () => {
 
   const renderUserList = () => {
     if (usersLoading) return null;
-    // Only renders users who's profile we're not currently viewing
     const notMeUsers = users.filter(o => o._id !== user._id);
     return <UserList users={notMeUsers} title="User List" />;
   };
@@ -51,23 +52,49 @@ const Profile = () => {
   const renderCurrentUserInfo = () => {
     if (id) return null;
     return (
-      <ul>
-        <li>username: {user.username}</li>
-        <li>email: {user.email}</li>
-        <li>gametag: {user.gameTag}</li>
-      </ul>
+      <List style={{ textAlign: 'left' }}>
+        <List.Item style={{ paddingBottom: '40px' }}>
+          <List.Header style={{ fontSize: '1.5em' }}>Username:</List.Header>
+          <List.Content style={{ fontSize: '1.2em' }}>{user.username}</List.Content>
+        </List.Item>
+        <List.Item style={{ paddingBottom: '40px' }}>
+          <List.Header style={{ fontSize: '1.5em' }}>Email:</List.Header>
+          <List.Content style={{ fontSize: '1.2em' }}>{user.email}</List.Content>
+        </List.Item>
+        <List.Item style={{ paddingBottom: '40px' }}>
+          <List.Header style={{ fontSize: '1.5em' }}>Gametag:</List.Header>
+          <List.Content style={{ fontSize: '1.2em' }}>{user.gameTag}</List.Content>
+        </List.Item>
+      </List>
     );
-  }
+  };
 
   return (
-    <div>
-      <div>
-        <h2>
-          Viewing {id ? `${user.username}'s` : 'your'} profile.
-        </h2>
+    <div
+      style={{
+        backgroundImage: `url(${profilebackground})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        minHeight: '100vh',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
+      }}
+    >
+      <Container
+        style={{
+          backgroundColor: 'rgba(255, 255, 255, 0.8)',
+          padding: '40px',
+          borderRadius: '10px',
+        }}
+        textAlign="center"
+      >
+        <Header as="h1" style={{ fontSize: '100px', marginBottom: '30px' }}>
+          My Profile
+        </Header>
         {renderCurrentUserInfo()}
         {renderUserList()}
-      </div>
+      </Container>
     </div>
   );
 };

@@ -1,6 +1,9 @@
 import { useState, useEffect } from "react";
-import '../assets/css/Trivia.css'; // Import css file
+// import '../assets/css/Trivia.css'; // Import css file
 import { Navigate } from "react-router-dom";
+import "semantic-ui-css/semantic.min.css"; // Import css library
+import { Button, Container, Header, Image, Grid } from "semantic-ui-react";
+import triviabackground from '../../public/images/triviabackground.jpg';
 
 
 const Trivia = () => {
@@ -14,16 +17,25 @@ const Trivia = () => {
     const questions =[
         {
             id: 1,
-            question: "Who am I?",
-            image: '../../public/images/lisa-simpson.jpg',
-            options: [
-              "Lisa Simpson",
-              "Bart Simpson",
-              "Marge Simpson",
-              "Homer Simpson"
-            ],
-            answer: "Lisa Simpson"
-          },
+            question: "What is the name of Arnold's best friend in 'Hey Arnold'?",
+            image: '../../public/images/gerald.jpg',
+            options: ["Gerald", "Sid", "Stinky", "Harold"],
+            answer: "Gerald"
+        },
+        {
+            id: 2,
+            question: "Testing page switching?",
+            image: '../../public/images/gerald.jpg',
+            options: ["Gerald", "Sid", "Stinky", "Harold"],
+            answer: "Gerald"
+        },
+        {
+            id: 3,
+            question: "More testing....?",
+            image: '../../public/images/gerald.jpg',
+            options: ["Gerald", "Sid", "Stinky", "Harold"],
+            answer: "Gerald"
+        },
     ]
         
         // Test this one question before adding more
@@ -106,39 +118,67 @@ const Trivia = () => {
 
     // Trivia component
     return (
-        <div className="trivia-container">
-            {showResult ? (
-                <div>
-                    <h2>Result</h2>
-                    <p>Your score: {score}</p>
-                    <button onClick={handleRestart}>Restart</button>
-                </div>
-            ) : (
-                <div>
-                    <h1>Trivia</h1>
-                    <h4>Score {score}</h4>
-                    <h2>Time left: {timeLeft}</h2>
-                    <h3>Question {currentQuestionIndex + 1}</h3>
-                    <h4>{questions[currentQuestionIndex].question}</h4>
-                    <img src={questions[currentQuestionIndex].image} alt="Question" />
-                    <div>
-                        {questions[currentQuestionIndex].options.map((option) => (
-                            <button
-                                key={option}
-                                onClick={() => handleOptionSelect(option)}
-                                disabled={selectedOption !== null || selectedOption === option}
-                            >
-                                {option}
-                            </button>
-                        ))}
-                    </div>
-                    <button onClick={handleNextQuestion} disabled={!selectedOption}>Next</button>
-                </div>
-            )}
-
+        <div
+            style={{
+                backgroundImage: `url(${triviabackground})`,
+                backgroundSize: "cover",
+                backgroundPosition: "center",
+                minHeight: "100vh",
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+            }}
+        >
+            <div
+                style={{
+                    width: "50%",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    padding: "20px",
+                    borderRadius: "10px",
+                }}
+            >
+                <Container textAlign="center">
+                    {showResult ? (
+                        <div className="result">
+                            <Header as="h2">Result</Header>
+                            <p>Your score: {score}</p>
+                            <Button onClick={handleRestart}>Restart</Button>
+                        </div>
+                    ) : (
+                        <div className="question">
+                            <Header as="h1" style={{ fontSize: "150px", fontWeight: "bold" }}>Trivia</Header>
+                            <Grid>
+                                <Grid.Row>
+                                    <Grid.Column width={8} textAlign="left">
+                                        <Header as="h3">Time left: {timeLeft}</Header>
+                                    </Grid.Column>
+                                    <Grid.Column width={8} textAlign="right">
+                                        <Header as="h4">Score {score}</Header>
+                                    </Grid.Column>
+                                </Grid.Row>
+                            </Grid>
+                            <Header as="h2">Question {currentQuestionIndex + 1}</Header>
+                            <Header as="h3" style={{ fontSize: "25px" }}>{questions[currentQuestionIndex].question}</Header>
+                            <Image src={questions[currentQuestionIndex].image} alt="Question" centered />
+                            <div className="options">
+                                {questions[currentQuestionIndex].options.map((option) => (
+                                    <Button
+                                        key={option}
+                                        onClick={() => handleOptionSelect(option)}
+                                        disabled={selectedOption !== null || selectedOption === option}
+                                        style={{ fontSize: "20px", fontWeight: "bold", margin: "5px" }}
+                                    >
+                                        {option}
+                                    </Button>
+                                ))}
+                            </div>
+                            <Button primary onClick={handleNextQuestion} disabled={!selectedOption}>Next</Button>
+                        </div>
+                    )}
+                </Container>
+            </div>
         </div>
     );
 };
-
 
 export default Trivia;
