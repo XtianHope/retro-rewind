@@ -1,122 +1,107 @@
 [
   {
-    "id": "1",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "1",
+      "question": "What is the name of Arnold's best friend in 'Hey Arnold'?",
+      "image": "'../../public/images/gerald.jpg'",
+      "options": ["Gerald", "Sid", "Stinky", "Harold"],
+      "answer": "Gerald"
   },
   {
-    "id": "2",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "2",
+      "question": "Who is the fearless dog protecting his owners from various monsters and villains?",
+      "image": "'../../public/images/courage.jpg'",
+      "options": ["Katz", "Muriel", "Eustace", "Courage the Cowardly Dog"],
+      "answer": "Courage the Cowardly Dog"
   },
   {
-    "id": "3",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "3",
+      "question": "Which show is set in the future and follows the adventures of a delivery boy?",
+      "image": "'../../public/images/futurama.jpg'",
+      "options": ["Futurama", "The Jetsons", "Space Odyssey", "Tomorrowland"],
+      "answer": "Futurama"
   },
   {
-    "id": "4",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "4",
+      "question": "What is the name of the evil genius cat in 'Pinky and The Brain'?",
+      "image": "'../../public/images/pinky-brain.jpg'",
+      "options": ["Whiskers", "Snowball", "Fluffy", "Snowflake"],
+      "answer": "Snowball"
   },
   {
-    "id": "5",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "5",
+      "question": "What is the name of the pet dog owned by the Simpson family?",
+      "image": "'../../public/images/santas-little-helper.jpg'",
+      "options": ["Rover", "Fido", "Santa's Little Helper", "Spot"],
+      "answer": "Santa's Little Helper"
   },
   {
-    "id": "6",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "6",
+      "question": "What is the name of the laboratory monkey in 'Dexter's Laboratory'?",
+      "image": "'../../public/images/monkey.jpg'",
+      "options": ["Hairy Larry", "Monkey", "Bobo", "Fred"],
+      "answer": "Monkey"
   },
   {
-    "id": "7",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "7",
+      "question": "What is the catchphrase of Johnny Bravo?",
+      "image": "'../../public/images/johnny-bravo.jpg'",
+      "options": ["'Hey there, pretty mama!'", "'Lookin' good!'", "'Whoa, mama!'", "'Good to see ya!'"],
+      "answer": "'Hey there, pretty mama!'"
   },
   {
-    "id": "8",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "8",
+      "question": "What is the name of Chuckie Finster's dad in 'Rugrats'?",
+      "image": "'../../public/images/chas.jpg'",
+      "options": ["Drew", "Stu", "Howard", "Chas"],
+      "answer": "Chas"
   },
   {
-    "id": "9",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "9",
+      "question": "What is the name of the character who is always trying to steal the Krabby Patty secret formula?",
+      "image": "'../../public/images/plankton.jpg'",
+      "options": ["Larry the Lobster", "Plankton", "Pearl", "Mermaid Man"],
+      "answer": "Plankton"
   },
   {
-    "id": "10",
-    "question": "Who am I?",
-    "image": "'../../public/images/lisa-simpson.jpg'",
-    "options": [
-      "Lisa Simpson",
-      "Bart Simpson",
-      "Marge Simpson",
-      "Homer Simpson"
-    ],
-    "answer": "Lisa Simpson"
+      "id": "10",
+      "question": "What is the name of the stone-age family's car in 'The Flintstones'?",
+      "image": "'../../public/images/flintmobile.jpg'",
+      "options": ["Bedrock Buggy", "Rock-a-bye Car", "The Flintmobile", "Pebble Pusher"],
+      "answer": "The Flintmobile"
+  },
+  {
+      "id": "11",
+      "question": "Which show features a group of kids who are into extreme sports?",
+      "image": "'../../public/images/rocket-power.jpg'",
+      "options": ["Extreme Teens", "Rocket Power", "Skater Boys", "Thrill Seekers"],
+      "answer": "Rocket Power"
+  },
+  {
+      "id": "12",
+      "question": "What is the name of the recurring mouse character who is Tom's nephew?",
+      "image": "'../../public/images/tuffy.jpg'",
+      "options": ["Tuffy", "Cheddar", "Nibbles", "Whiskers"],
+      "answer": "Tuffy"
+  },
+  {
+      "id": "35",
+      "question": "What is the name of CatDog's neighbor and best friend, a blue mouse?",
+      "image": "'../../public/images/winslow.jpg'",
+      "options": ["Larry the Rat", "Winslow T. Oddfellow", "Chester Cheese", "Marty Mouse"],
+      "answer": "Winslow T. Oddfellow"
+  },
+  {
+      "id": "14",
+      "question": "What is the name of the robotic maid in 'The Jetsons'?",
+      "image": "'../../public/images/rosie.jpg'",
+      "options": ["Rosie", "Roberta", "Robo-Maid", "Roxanne"],
+      "answer": "Rosie"
+  },
+  {
+      "id": "15",
+      "question": "What is the name of the main antagonist in 'Inspector Gadget', who is a criminal mastermind?",
+      "image": "'../../public/images/dr-claw.jpg'",
+      "options": ["Baron von Badguy", "Professor Chaos", "The Mastermind", "Dr. Claw"],
+      "answer": "Dr. Claw"
   }
 ]
