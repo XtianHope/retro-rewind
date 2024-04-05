@@ -7,6 +7,14 @@ const typeDefs = `#graphql
     gameTag: String
   }
 
+  type Question {
+    id: ID
+    question: String
+    image: String
+    options: [String]
+    answer: String
+  }
+
   type Auth {
     token: ID!
     user: User

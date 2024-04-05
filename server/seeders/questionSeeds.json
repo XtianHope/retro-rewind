@@ -1,0 +1,122 @@
+[
+  {
+    "id": "1",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "2",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "3",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "4",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "5",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "6",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "7",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "8",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "9",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  },
+  {
+    "id": "10",
+    "question": "Who am I?",
+    "image": "'../../public/images/lisa-simpson.jpg'",
+    "options": [
+      "Lisa Simpson",
+      "Bart Simpson",
+      "Marge Simpson",
+      "Homer Simpson"
+    ],
+    "answer": "Lisa Simpson"
+  }
+]
