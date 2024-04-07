@@ -4,15 +4,44 @@ import { Navigate } from "react-router-dom";
 import "semantic-ui-css/semantic.min.css"; // Import css library
 import { Button, Container, Header, Image, Grid } from "semantic-ui-react";
 import triviabackground from '../../public/images/triviabackground.jpg';
+// import { useQuery } from '@apollo/client';
+
+
+// import { gql } from '@apollo/client';
+
+// export const QUERY_QUESTIONS = gql`
+//   query {
+//     questions {
+//       id
+//       question
+//       image
+//       options
+//       answer
+//     }
+//   }
+// `;
+
 
 
 const Trivia = () => {
-    const [timeLeft, setTimeLeft] = useState(300); //5 minutes is 300 seconds
+    const [timeLeft, setTimeLeft] = useState(5); //5 minutes is 300 seconds
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Index keeps track of question user is on
     const [selectedOption, setSelectedOption] = useState(null); // Keeps track of user selected answer
     const [score, setScore] = useState(0); // User score
     const [showResult, setShowResult] = useState(false); // Show result page
     const [highScores, setHighScores] = useState([]); // High scores - Array to store
+    // const [initials, setInitials] = useState(""); // Initials for high score
+
+
+    // const [questions, setQuestions] = useState([]); // Questions
+    // const { loading, error, data } = useQuery(QUERY_QUESTIONS); // Query to get questions
+
+    // useEffect(() => {
+    //     if (data) {
+    //         const shuffledQuestions = data.questions.sort(() => Math.random() - 0.5);
+    //         setQuestions(shuffledQuestions);
+    //     }
+    // }, [data]);
 
     const questions =[
         {
@@ -43,19 +72,23 @@ const Trivia = () => {
 
     // Timer
     useEffect(() => {
-        const timerInterval = setInterval(() => {
-            setTimeLeft(prevTimeLeft => {
-                if (prevTimeLeft <= 0 || currentQuestionIndex >= questions.length) {
-                    clearInterval(timerInterval);
-                    setShowResult(true);
-                    return 0;
-                }
-                return prevTimeLeft - 1;
-            });
-        }, 1000);
+        let timerInterval;
 
-        return () => clearInterval(timerInterval); // Function clears time interval
-    }, [currentQuestionIndex, questions.length]);
+        if (!showResult) {
+            timerInterval = setInterval(() => {
+                setTimeLeft(prevTimeLeft => {
+                    if (prevTimeLeft <= 0 || currentQuestionIndex >= questions.length) {
+                        clearInterval(timerInterval);
+                        setShowResult(true);
+                        return 0;
+                    }
+                    return prevTimeLeft - 1;
+                });
+            }, 1000);
+        }
+
+        return () => clearInterval(timerInterval);
+    }, [currentQuestionIndex, questions.length, showResult]);
 
     // Option selection
     const handleOptionSelect = (option) => {

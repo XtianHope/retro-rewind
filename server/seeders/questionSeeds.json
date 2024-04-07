@@ -84,7 +84,7 @@
       "answer": "Tuffy"
   },
   {
-      "id": "35",
+      "id": "13",
       "question": "What is the name of CatDog's neighbor and best friend, a blue mouse?",
       "image": "'../../public/images/winslow.jpg'",
       "options": ["Larry the Rat", "Winslow T. Oddfellow", "Chester Cheese", "Marty Mouse"],
@@ -103,5 +103,75 @@
       "image": "'../../public/images/dr-claw.jpg'",
       "options": ["Baron von Badguy", "Professor Chaos", "The Mastermind", "Dr. Claw"],
       "answer": "Dr. Claw"
+  },
+  {
+      "id": "16",
+      "question": "What is the name of the main character in 'The Fairly OddParents' who has two fairy godparents?",
+      "image": "'../../public/images/timmy.jpg'",
+      "options": ["Tommy", "Timmy", "Jimmy", "Bobby"],
+      "answer": "Timmy"
+  },
+  {
+      "id": "17",
+      "question": "What is the name of the main character in 'The Angry Beavers' who is known for his neurotic behavior?",
+      "image": "'../../public/images/norbert.jpg'",
+      "options": ["Daggett", "Barry", "Norbert", "Benny"],
+      "answer": "Norbert"
+  },
+  {
+      "id": "18",
+      "question": "Which character in 'Powerpuff Girls' is known for creating various inventions and gadgets?",
+      "image": "../../public/images/powerpuff-girls.jpg",
+      "options": ["Professor Utonium", "Mojo Jojo", "Mayor of Townsville", "Him"],
+      "answer": "Professor Utonium"
+  },
+  {
+      "id": "19",
+      "question": "In 'DuckTales,' what are the names of Huey, Dewey, and Louie's wealthy uncle?",
+      "image": "../../public/images/ducktales.jpg",
+      "options": ["Darkwing Duck", "Launchpad McQuack", "Scrooge McDuck", "Gyro Gearloose"],
+      "answer": "Scrooge McDuck"
+  },
+  {
+      "id": "20",
+      "question": "Which character in 'Aaahh!!! Real Monsters' is known for holding his eyes in his hands?",
+      "image": "../../public/images/real-monsters.jpg",
+      "options": ["Ickis", "Oblina", "Krumm", "The Gromble"],
+      "answer": "Krumm"
+  },
+  {
+      "id": "21",
+      "question": "What is the name of the family dog in 'The Wild Thornberrys' who has the ability to speak to humans?",
+      "image": "../../public/images/darwin.jpg",
+      "options": ["Darwin", "Spike", "Eliza", "Donnie"],
+      "answer": "Darwin"
+  },
+  {
+      "id": "22",
+      "question": "In 'Tiny Toon Adventures,' who is the mentor to the main characters at Acme Looniversity?",
+      "image": "../../public/images/buggs.jpg",
+      "options": ["Bugs Bunny", "Daffy Duck", "Elmer Fudd", "Porky Pig"],
+      "answer": "Bugs Bunny"
+  },
+  {
+      "id": "23",
+      "question": "What is the name of the main villain in 'Darkwing Duck' who is known for his catchphrase, 'I am the terror that flaps in the night'?",
+      "image": "../../public/images/darkwing-duck.jpg",
+      "options": ["Bushroot", "Quackerjack", "Megavolt", "Negaduck"],
+      "answer": "Negaduck"
+  },
+  {
+      "id": "24",
+      "question": "What is the name of the main character's pet cat in 'The Ren & Stimpy Show'?",
+      "image": "../../public/images/ren-and-stimpy.jpg",
+      "options": ["Stimpy", "Ren", "Mr. Whiskers", "Powdered Toast Man"],
+      "answer": "Stimpy"
+  },
+  {
+      "id": "25",
+      "question": "In 'The Magic School Bus,' what is the name of the teacher who takes her class on educational field trips?",
+      "image": "../../public/images/magic-school-bus.jpg",
+      "options": ["Mr. Ruhle", "Ms. Frizzle", "Mrs. Murphy", "Ms. Whittaker"],
+      "answer": "Ms. Frizzle"
   }
 ]
