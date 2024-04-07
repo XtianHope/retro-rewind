@@ -5,6 +5,7 @@ import { useMutation } from '@apollo/client';
 import { ADD_USER } from '../utils/mutations';
 
 import Auth from '../utils/auth';
+import questionablecartoons from '../../public/images/questionablecartoons.jpg';
 
 const Signup = () => {
   const [formState, setFormState] = useState({
@@ -41,12 +42,12 @@ const Signup = () => {
   const renderForm = () => {
     if (data) {
       return (
-      <p>
-        Success! You may now head{' '}
-        <Link to="/">back to the homepage.</Link>
-      </p>
+        <p>
+          Success! You may now head{' '}
+          <Link to="/">back to the homepage.</Link>
+        </p>
       )
-    } 
+    }
     return (
       <form onSubmit={handleFormSubmit}>
         <input
@@ -85,14 +86,34 @@ const Signup = () => {
   };
 
   return (
-    <main>
-      <h4>Sign Up</h4>
-      <div>
-        {renderForm()}
-        {error && <div>{error.message}</div>}
-      </div>
-    </main>
-  );
+    <div
+      style={{
+        backgroundImage: `url(${questionablecartoons})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        minHeight: "100vh",
+        display: "flex",
+        justifyContent: "center",
+        alignItems: "center",
+      }}
+    >
+      <div
+                style={{
+                    width: "50%",
+                    backgroundColor: "rgba(255, 255, 255, 0.8)",
+                    padding: "100px",
+                    borderRadius: "10px",
+                }}
+            >
+      <main>
+        <h4>Sign Up</h4>
+        <div>
+          {renderForm()}
+          {error && <div>{error.message}</div>}
+        </div>
+      </main></div>
+    </div>
+    );
 };
 
 export default Signup;

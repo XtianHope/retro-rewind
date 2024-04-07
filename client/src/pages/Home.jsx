@@ -6,6 +6,8 @@ import { MagnifyingGlass } from 'react-loader-spinner'
 import "semantic-ui-css/semantic.min.css"; // Import css library
 import { Container, Header } from 'semantic-ui-react';
 import homebackground from '../../public/images/homebackground.png';
+// import { Helmet } from 'react-Helmet';
+// import "../assets/css/home.css"
 
 function Home() {
   const { data, loading, error } = useQuery(QUERY_USERS);
@@ -15,7 +17,7 @@ function Home() {
   if (error) {
     throw Error(error);
   }
-  
+
   if (loading) {
     return <div
       style={{
@@ -58,8 +60,12 @@ function Home() {
           textAlign: 'center'
         }}
       >
-        <Header as="h1" style={{ fontSize: '100px', fontWeight: 'bold' }}>
-          RETRO REWIND
+          
+        <Header as="h1"  style={{ fontSize: '100px', fontWeight: 'bold' }}>
+          RETRO-REWIND
+          <div className="image">
+            <img src='../../public/images/rewindButtonIcon.png' width={'150px'} alt="rewind button" />
+          </div>
         </Header>
         <Header as="h2" style={{ textAlign: 'left', fontSize: '36px' }}>
           Recent Users
