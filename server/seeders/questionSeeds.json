@@ -141,7 +141,7 @@
   },
   {
       "id": "21",
-      "question": "What is the name of the family dog in 'The Wild Thornberrys' who has the ability to speak to humans?",
+      "question": "What is the name of the family monkey in 'The Wild Thornberrys' who has the ability to speak to humans?",
       "image": "../../public/images/darwin.jpg",
       "options": ["Darwin", "Spike", "Eliza", "Donnie"],
       "answer": "Darwin"
