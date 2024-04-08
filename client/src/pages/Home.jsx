@@ -50,6 +50,7 @@ function Home() {
         display: 'flex',
         justifyContent: 'center',
         alignItems: 'center',
+        fontFamily: 'Honk'
       }}
     >
       <Container
@@ -61,16 +62,16 @@ function Home() {
         }}
       >
           
-        <Header as="h1"  style={{ fontSize: '100px', fontWeight: 'bold' }}>
+        <Header as="h1"  style={{ fontSize: '127px', fontWeight: 'bold', fontFamily: 'Honk'}}>
           RETRO-REWIND
           <div className="image">
-            <img src='../../public/images/rewindButtonIcon.png' width={'150px'} alt="rewind button" />
+            <img src='../../public/images/rewindButtonIcon.png' width={'120px'} alt="rewind button" />
           </div>
         </Header>
         <Header as="h2" style={{ textAlign: 'left', fontSize: '36px' }}>
           Recent Users
         </Header>
-        <div style={{ textAlign: 'left', fontSize: '24px' }}>
+        <div style={{ textAlign: 'left', fontSize: '24px', fontamily: 'Honk' }}>
           <UserList users={users} />
         </div>
       </Container>
