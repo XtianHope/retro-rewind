@@ -1,10 +1,14 @@
 import { useState, useEffect } from "react";
+// import {useLocation} from 'react-router-dom'
 import "semantic-ui-css/semantic.min.css"; // Import css
 import { Container, Header } from "semantic-ui-react";
 import highscoresbackground from '../../public/images/highscoresbackground.jpg';
 
-const HighScoresPage = () => {
 
+const HighScoresPage = () => {
+    // const location = useLocation()
+    // const {score} = location.state
+    // console.log(score)
     const [highScores, setHighScores] = useState([]);
     const fetchHighScores = async () => {
         try {

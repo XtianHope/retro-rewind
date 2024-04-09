@@ -23,3 +23,14 @@ export const ADD_USER = gql`
     }
   }
 `;
+
+
+export const ADD_SCORE_TO_USER = gql`
+  mutation addScoreToUser($score: Int) {
+    addScoreToUser(score: $score) {
+      _id
+      username
+      scores
+    }
+  }
+`;
