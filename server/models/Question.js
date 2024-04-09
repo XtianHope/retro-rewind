@@ -13,7 +13,7 @@ const questionSchema = new Schema({
     // unique: true,
     trim: true,
   },
- options: {
+  options: {
     type: [String],
     required: true,
   },
@@ -22,7 +22,7 @@ const questionSchema = new Schema({
     required: true,
     trim: true,
   },
-  }
+}
 );
 
 const Question = model('Question', questionSchema);

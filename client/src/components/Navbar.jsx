@@ -42,11 +42,11 @@ const Navbar = () => {
           />
 
 <Menu.Item
-            name='highScores'
-            active={activeItem === 'highScores'}
-            onClick={() => handleItemClick('highScores')}
+            name='highscores'
+            active={activeItem === 'highscores'}
+            onClick={() => handleItemClick('highscores')}
             as={Link}
-            to="/highScores"
+            to="/highscores"
           />
 
 

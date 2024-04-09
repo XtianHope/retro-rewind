@@ -22,16 +22,16 @@ const userSchema = new Schema({
   gameTag: {
     type: String,
     // required: true,
-    minlength:3,
-    maxLength:4
+    minlength: 3,
+    maxLength: 4
   },
-  score: {
+  scores: [
+    {
       type: Number,
-      required: null,
-      minlength: 3,
-      maxLength: 3
+      required: null
     }
-  }
+  ],
+}
 );
 
 userSchema.pre('save', async function (next) {

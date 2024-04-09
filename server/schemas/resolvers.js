@@ -40,7 +40,18 @@ const resolvers = {
       const token = signToken(user);
 
       return { token, user };
-    }
+    },
+    addScoreToUser: async (_, args, context) => {
+      if (context.user) {
+         return await User.findByIdAndUpdate(
+          context.user._id, 
+          { $addToSet: { scores: args.score }},
+          { new: true }
+        );
+        
+      }
+      throw new GraphQLError('Incorrect credentials'); 
+    },
   }
 };
 
