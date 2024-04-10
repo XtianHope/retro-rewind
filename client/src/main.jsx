@@ -10,7 +10,6 @@ import Signup from './pages/Signup.jsx';
 import Trivia from './pages/Trivia.jsx'; // Imported new Trivia page
 import HighScoresPage from './pages/HighScores.jsx'; // Imported high scores page
 
-
 const router = createBrowserRouter([
   {
     path: '/',

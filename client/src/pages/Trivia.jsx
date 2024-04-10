@@ -1,49 +1,18 @@
 import { useState, useEffect } from "react";
-// import '../assets/css/Trivia.css'; // Import css file
 import { Link, useNavigate } from "react-router-dom";
 import { useMutation } from "@apollo/client";
 import { ADD_SCORE_TO_USER } from "../utils/mutations";
 import "semantic-ui-css/semantic.min.css"; // Import css library
 import { Button, Container, Header, Image, Grid } from "semantic-ui-react";
 import triviabackground from '../../public/images/triviabackground.jpg';
-// import { useQuery } from '@apollo/client';
-
-
-// import { gql } from '@apollo/client';
-
-// export const QUERY_QUESTIONS = gql`
-//   query {
-//     questions {
-//       id
-//       question
-//       image
-//       options
-//       answer
-//     }
-//   }
-// `;
-
-
 
 const Trivia = () => {
-    const [timeLeft, setTimeLeft] = useState(20); //5 minutes is 300 seconds
+    const [timeLeft, setTimeLeft] = useState(30); //5 minutes is 300 seconds
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0); // Index keeps track of question user is on
     const [selectedOption, setSelectedOption] = useState(null); // Keeps track of user selected answer
     const [score, setScore] = useState(0); // User score
     const [showResult, setShowResult] = useState(false); // Show result page
     const [highScores, setHighScores] = useState([]); // High scores - Array to store
-    // const [initials, setInitials] = useState(""); // Initials for high score
-
-
-    // const [questions, setQuestions] = useState([]); // Questions
-    // const { loading, error, data } = useQuery(QUERY_QUESTIONS); // Query to get questions
-
-    // useEffect(() => {
-    //     if (data) {
-    //         const shuffledQuestions = data.questions.sort(() => Math.random() - 0.5);
-    //         setQuestions(shuffledQuestions);
-    //     }
-    // }, [data]);
 
     const [addScoreToUser, { error }] = useMutation(ADD_SCORE_TO_USER);
     const navigate = useNavigate();
@@ -234,7 +203,7 @@ const Trivia = () => {
 
     // Restart - Reset to 5 min/300 sec - Reset to  first question - Reset score to 0
     const handleRestart = () => {
-        setTimeLeft(10);
+        setTimeLeft(30);
         setCurrentQuestionIndex(0);
         setSelectedOption(null);
         setScore(0);
