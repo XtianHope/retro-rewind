@@ -65,7 +65,7 @@ function Home() {
         <Header as="h1"  style={{ fontSize: '127px', fontWeight: 'bold', fontFamily: 'Honk'}}>
           RETRO-REWIND
           <div className="image">
-            <img src='../../public/images/rewindButtonIcon.png' width={'120px'} alt="rewind button" />
+            <img src='../../images/rewindButtonIcon.png' width={'120px'} alt="rewind button" />
           </div>
         </Header>
         <Header as="h2" style={{ textAlign: 'left', fontSize: '36px' }}>
