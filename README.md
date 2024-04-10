@@ -14,7 +14,7 @@ User authentication on the sign-in page lets game players save their user info a
 Retro-rewind is deployed on Render. See links below.
 
 - - - -
-Render-deployed app: https://
+Render-deployed app: https://retro-rewind.onrender.com/
 
 GitHub repository: https://github.com/XtianHope/retro-rewind
 
