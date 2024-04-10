@@ -1,33 +1,22 @@
-import { useState, useEffect } from "react";
-// import {useLocation} from 'react-router-dom'
 import "semantic-ui-css/semantic.min.css"; // Import css
 import { Container, Header } from "semantic-ui-react";
 import highscoresbackground from '../../public/images/highscoresbackground.jpg';
+import { useQuery, gql } from '@apollo/client';
 
+const GET_SCORE = gql`
+    query Users {
+      users {
+        _id
+        gameTag
+        scores
+      }
+    }
+`;
 
 const HighScoresPage = () => {
-    // const location = useLocation()
-    // const {score} = location.state
-    // console.log(score)
-    const [highScores, setHighScores] = useState([]);
-    const fetchHighScores = async () => {
-        try {
-            const response = await fetch("/api/highscores");
-            if (response.ok) {
-                const data = await response.json();
-                setHighScores(data);
-            } else {
-                console.error("Failed to fetch high scores:", response.statusText);
-            }
-        } catch (error) {
-            console.error("Error fetching high scores:", error.message);
-        }
-    };
-
-    // useEffect hook to fetch high scores
-    useEffect(() => {
-        fetchHighScores();
-    }, []);
+    const { loading, error, data } = useQuery(GET_SCORE);
+    if (loading) return 'Loading...';
+    if (error) return `Error! ${error.message}`;
 
     return (
         <div
@@ -54,9 +43,9 @@ const HighScoresPage = () => {
                 </Header>
                 <ul>
                     {/* Map over the high scores and render each score as a list item */}
-                    {highScores.map((score, index) => (
-                        <li key={index}>
-                            {score.name}: {score.score}
+                    {data.users.map((user) => (
+                        <li key={user._id} value={user.scores} style={{ fontSize: "50px", marginBottom: "40px" }}>
+                            {user.scores}
                         </li>
                     ))}
                 </ul>
